@@ -1,0 +1,32 @@
+.myImg > .col > img {
+    max-width: 100%;
+    padding: 25% 0;
+}
+
+.myImg {
+    padding: 5% 0;
+}
+
+.verse-title .row .col:nth-of-type(2) {
+    padding: 15% 0;
+}
+
+.myImg+.row {
+    margin-top: -10%;
+}
+
+.verse-container .row {
+    box-shadow: 2px 2px 2px lightblue;
+}
+
+#verse-btn {
+    position: relative;
+    top: -4px;
+    background: inherit;
+    color: black;
+    border-radius: 50px;
+}
+
+.nav-link {
+    display: inline-block !important;
+}

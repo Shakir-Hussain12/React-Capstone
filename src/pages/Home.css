@@ -1,0 +1,45 @@
+#root {
+    background-color: rgb(190 221 211);
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.quran-details {
+    padding: 7%;
+}
+
+.heading {
+    background-color: rgb(140 205 186);
+}
+
+#myDiv .col {
+    box-shadow: 2px 2px 2px  lightblue;
+}
+
+#myDiv a {
+    text-decoration: none;
+    color: black;
+}
+
+.col img {
+    mix-blend-mode: darken;
+    margin-right: -30px;
+    margin-bottom: -30px;
+}
+
+.col button {
+    position: relative;
+    top: 3vh;
+    left: 3%;
+    background: inherit;
+    color: black;
+    border-radius: 50px;
+}
+
+.row h2 {
+    margin-bottom: 0;
+}
+
+.fix img {
+    padding: 13% 0;
+}
