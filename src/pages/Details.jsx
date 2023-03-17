@@ -1,38 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import './Details.css';
-
 import {
-  Col, Container, Form, Nav, Navbar, Row,
+  Col, Container, Row,
 } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { getVerses } from '../redux/Verse/verseReducer';
+
+import './Details.css';
 import Verse from '../components/Verse';
+import Navigation from '../components/Navigation';
 
 function Details() {
   const location = useLocation();
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getVerses(location.state.id));
+  }, [dispatch, location.state.id]);
+
+  const { verses } = useSelector((store) => store.Verse);
   return (
     <>
-      <Navbar bg="light">
-        <Container fluid>
-          <Navbar.Brand href="#">Back</Navbar.Brand>
-          <Nav
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Quran/Chapters"
-                className="me-2"
-                aria-label="Search"
-              />
-            </Form>
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <Navigation url={`Quran/${location.state.title}`} />
       <Container fluid style={{ textAlign: 'center' }} className="verse-title">
-        <Row className={location.state.title === 'Maidah' ? 'myImg' : ''}>
+        <Row className={location.state.title === "Al-Ma'idah" ? 'myImg' : ''}>
           <Col>
             <img src={location.state.image} alt="none" />
           </Col>
@@ -48,11 +39,18 @@ function Details() {
         <Row style={{ textAlign: 'left' }}>
           <h1 className="heading">
             {location.state.title}
-            /Verse Details
+            /Verses
           </h1>
         </Row>
       </Container>
-      <Verse myVerse="Verse 1" />
+      {
+        verses.map((verse) => {
+          const { id, words } = verse;
+          return (
+            <Verse key={id} myVerse={words} mytitle={location.state.title} />
+          );
+        })
+      }
     </>
   );
 }

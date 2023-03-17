@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { GrFormNextLink } from 'react-icons/gr';
 import '../pages/Home.css';
 
 function Chapter({ chapter, mychapter }) {
@@ -9,10 +10,15 @@ function Chapter({ chapter, mychapter }) {
     <>
       <NavLink
         to="/details"
-        state={{ image: chapter, title: mychapter.title, verseCount: mychapter.verses }}
+        state={{
+          image: chapter,
+          title: mychapter.title,
+          verseCount: mychapter.verses,
+          id: mychapter.id,
+        }}
         className={(link) => (link.isActive ? 'link active' : 'link')}
       >
-        <Button type="button">hi</Button>
+        <Button type="button"><GrFormNextLink /></Button>
         <img src={`./${chapter}`} alt="none" className="img-fluid" />
         <h2>{mychapter.title}</h2>
         <p>
@@ -32,6 +38,7 @@ Chapter.defaultProps = {
   mychapter: {
     title: '',
     verses: '',
+    id: '',
   },
 };
 
@@ -40,5 +47,6 @@ Chapter.propTypes = {
   mychapter: PropTypes.shape({
     title: PropTypes.string,
     verses: PropTypes.number,
+    id: PropTypes.number,
   }),
 };

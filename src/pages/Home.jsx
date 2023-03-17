@@ -1,15 +1,17 @@
 import React from 'react';
 import {
   Col,
-  Container, Form, Nav, Navbar, Row,
+  Container, Row,
 } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import Chapter from '../components/Chapter';
+import Navigation from '../components/Navigation';
 import './Home.css';
 
 function Home() {
   const { chapters, total } = useSelector((store) => store.Quran);
   const imgChapters = ['Fatiha.jpg', 'Baqara.png', 'Imran.png', 'Nisa.png', 'Maidah.jpg', 'Anam.png'];
+
   const getItems = () => {
     const items = [];
     if (chapters.length > 1) {
@@ -30,26 +32,7 @@ function Home() {
   };
   return (
     <>
-      <Navbar bg="light">
-        <Container fluid>
-          <Navbar.Brand href="#">Back</Navbar.Brand>
-          <Nav
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Quran"
-                className="me-2"
-                aria-label="Search"
-              />
-            </Form>
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <Navigation url="Quran" />
       <Container fluid style={{ textAlign: 'center' }}>
         <Row gx="3">
           <Col>

@@ -34,6 +34,13 @@
     background: inherit;
     color: black;
     border-radius: 50px;
+    border: none;
+}
+
+.col button svg {
+    display: inline-block;
+    width: 1em;
+    margin-top: -235%;
 }
 
 .row h2 {

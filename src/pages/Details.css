@@ -17,6 +17,7 @@
 
 .verse-container .row {
     box-shadow: 2px 2px 2px lightblue;
+    padding: 5% 0;
 }
 
 #verse-btn {
@@ -29,4 +30,25 @@
 
 .nav-link {
     display: inline-block !important;
+}
+
+.verse-detail-cotainer .row {
+    padding: 2% 0;
+    border: 1px solid;
+    box-shadow: 3px 3px 3px lightseagreen;
+}
+
+.verse-detail-cotainer .row > .col {
+    font-weight: bold;
+}
+
+#per-btn {
+    background: white;
+    border: none;
+    color: blue;
+    position: fixed;
+    top: 3px;
+    left: 1%;
+    font-size: 20px;
+    width: 13%;
 }

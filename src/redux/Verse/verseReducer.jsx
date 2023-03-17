@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const base = 'https://api.quran.com/api/v4/verses/by_chapter/';
-const end = '?language=en&words=true&page=1&per_page=10';
+const end = '?language=en&words=true&page=1&per_page=20';
 
-export const getVerses = createAsyncThunk('Verses/getVerses', async () => {
+export const getVerses = createAsyncThunk('Verses/getVerses', async (id) => {
   const items = [];
-  const res = await axios(`${base}/2${end}`);
+  const res = await axios(`${base}/${id}${end}`);
   const { data } = res;
   data.verses.map((item) => {
     items.push({
