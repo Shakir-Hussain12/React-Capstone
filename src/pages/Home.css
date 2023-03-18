@@ -1,8 +1,9 @@
 #root {
-  background-color: rgb(190 221 211);
+  background-color: #3685df;
   height: 100vh;
   overflow-x: hidden;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
 }
 
 .quran-details {
@@ -10,21 +11,22 @@
 }
 
 .heading {
-  background-color: rgb(140 205 186);
+  background: #1f5ca3;
 }
 
 #myDiv .col {
-  box-shadow: 2px 2px 2px  lightblue;
+  background: rgba(60, 145, 233, 0);
+  box-shadow: 2px 2px 2px darkblue;
 }
 
 #myDiv a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .col img {
   mix-blend-mode: darken;
-  margin-right: -30px;
+  margin-right: -25px;
   margin-bottom: -30px;
 }
 

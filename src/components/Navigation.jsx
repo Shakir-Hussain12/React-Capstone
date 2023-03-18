@@ -10,11 +10,11 @@ import { FiSettings } from 'react-icons/fi';
 
 function Navigation({ url, back }) {
   return (
-    <Navbar bg="light">
+    <Navbar style={{ background: '#1f5ca3' }}>
       <Container fluid>
         <Navbar.Brand style={{ marginInlineStart: '2%', marginTop: '-2%' }}>
           <NavLink to={back}>
-            <MdOutlineArrowBackIosNew />
+            <MdOutlineArrowBackIosNew style={{ color: 'white' }} />
           </NavLink>
         </Navbar.Brand>
         <Nav
@@ -30,10 +30,10 @@ function Navigation({ url, back }) {
             />
           </Form>
           <Nav.Link href="/">
-            <BsMic />
+            <BsMic style={{ color: 'white' }} />
           </Nav.Link>
           <Nav.Link href="/">
-            <FiSettings />
+            <FiSettings style={{ color: 'white' }} />
           </Nav.Link>
         </Nav>
       </Container>

@@ -34,7 +34,7 @@ function Home() {
     <>
       <Navigation url="Quran" />
       <Container fluid style={{ textAlign: 'center' }}>
-        <Row gx="3">
+        <Row gx="3" style={{ background: '#5296e5' }}>
           <Col>
             <img src="./Quran.png" alt="none" className="img-fluid" />
           </Col>
