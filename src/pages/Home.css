@@ -1,0 +1,63 @@
+#root {
+  background-color: #3685df;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+.quran-details {
+  padding: 7%;
+}
+
+.heading {
+  background: #1f5ca3;
+  margin-bottom: 0;
+}
+
+#myDiv .col {
+  background: rgb(26 72 120 / 50%);
+  box-shadow: 2px 2px 2px darkblue;
+}
+
+#myDiv a {
+  text-decoration: none;
+  color: white;
+}
+
+.col img {
+  margin-right: -25px;
+  margin-bottom: -30px;
+  mix-blend-mode: color-burn;
+}
+
+.col button {
+  position: relative;
+  top: 3vh;
+  left: 3%;
+  background: inherit;
+  color: black;
+  border-radius: 50px;
+  border: none;
+}
+
+.col button svg {
+  display: inline-block;
+  width: 1em;
+  margin-top: -235%;
+  border: solid 1px;
+  border-radius: 12px;
+}
+
+.row h2 {
+  margin-bottom: 0;
+}
+
+.fix img {
+  padding: 13% 0;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+  background-color: inherit;
+}

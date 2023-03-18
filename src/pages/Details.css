@@ -1,0 +1,55 @@
+.myImg > .col > img {
+  max-width: 100%;
+  padding: 25% 0;
+}
+
+.myImg {
+  padding: 5% 0;
+}
+
+.myImg + .row {
+  margin-top: -10%;
+}
+
+.verse-container .row {
+  box-shadow: 2px 2px 2px darkblue;
+  background: rgb(26 72 120 / 50%);
+  padding: 5% 0;
+}
+
+#verse-btn {
+  position: relative;
+  top: -4px;
+  background: inherit;
+  color: black;
+  border-radius: 50px;
+}
+
+.nav-link {
+  display: inline-block !important;
+}
+
+.verse-detail-cotainer .row {
+  padding: 1.6% 0;
+  border: 1px solid;
+  box-shadow: 3px 3px 3px darkblue;
+}
+
+.verse-detail-cotainer .row > .col {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#per-btn {
+  background: rgb(31, 92, 163);
+  border: none;
+  color: white;
+  position: fixed;
+  top: 3px;
+  left: 1%;
+  font-size: 20px;
+  width: 13%;
+}
+
+.verse-title .row .col:nth-of-type(2) {
+  padding: 15% 0;
+}
