@@ -2,6 +2,7 @@
   background-color: rgb(190 221 211);
   height: 100vh;
   overflow-x: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .quran-details {
@@ -41,6 +42,8 @@
   display: inline-block;
   width: 1em;
   margin-top: -235%;
+  border: solid 1px;
+  border-radius: 12px;
 }
 
 .row h2 {
@@ -49,4 +52,12 @@
 
 .fix img {
   padding: 13% 0;
+}
+
+.btn.btn-primary:focus {
+  background-color: inherit;
+}
+
+.btn.btn-primary:hover {
+  background-color: inherit;
 }
