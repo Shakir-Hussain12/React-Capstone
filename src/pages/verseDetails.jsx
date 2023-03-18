@@ -9,14 +9,13 @@ import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 import './Details.css';
 import Navigation from '../components/Navigation';
 
-function useVerseDetails() {
+function VerseDetails() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { grandparent, parent } = location.state;
-
+  const { grandparent, parent } = location.state || {};
   const displayDetails = () => {
-    const { transliteration, translation, ...others } = parent;
+    const { transliteration, translation, ...others } = parent || {};
     let details = Object.keys(others);
 
     const items = [];
@@ -55,19 +54,21 @@ function useVerseDetails() {
     return items;
   };
 
-  return (
-    <>
-      <Navigation url={`Quran/${grandparent}/${parent.transliteration.text}/verseDetails}`} />
-      <Container className="verse-detail-cotainer">
-        {
-          displayDetails(parent)
-        }
-      </Container>
-      <Button type="button" onClick={() => navigate(-1)} id="per-btn">
-        <MdOutlineArrowBackIosNew />
-      </Button>
-    </>
-  );
+  if (grandparent && parent) {
+    return (
+      <>
+        <Navigation url={`Quran/${grandparent}/${parent.transliteration.text}/verseDetails}`} />
+        <Container className="verse-detail-cotainer">
+          {
+            displayDetails(parent)
+          }
+        </Container>
+        <Button type="button" onClick={() => navigate(-1)} id="per-btn">
+          <MdOutlineArrowBackIosNew />
+        </Button>
+      </>
+    );
+  }
 }
 
-export default useVerseDetails;
+export default VerseDetails;

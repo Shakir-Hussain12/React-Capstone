@@ -46,7 +46,7 @@ Chapter.propTypes = {
   chapter: PropTypes.string,
   mychapter: PropTypes.shape({
     title: PropTypes.string,
-    verses: PropTypes.number,
-    id: PropTypes.number,
+    verses: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   }),
 };

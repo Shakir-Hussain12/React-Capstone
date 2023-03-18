@@ -11,7 +11,7 @@ import Verse from '../components/Verse';
 import Navigation from '../components/Navigation';
 
 function Details() {
-  const location = useLocation();
+  const location = useLocation() || {};
 
   const dispatch = useDispatch();
   useEffect(() => {
