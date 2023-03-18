@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import store from '../Redux/store';
+import store from '../redux/store';
 import VerseDetails from '../pages/verseDetails';
 
 describe('App', () => {

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom';
-import store from '../Redux/store';
+import store from '../redux/store';
 import Chapter from '../components/Chapter';
 
 describe('App', () => {
