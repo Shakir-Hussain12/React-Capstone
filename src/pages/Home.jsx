@@ -40,11 +40,11 @@ function Home() {
           </Col>
           <Col className="quran-details">
             <h1> Holy Quran </h1>
-            <h3>
+            <h4>
               Total Chapters :
               {' '}
               {total}
-            </h3>
+            </h4>
           </Col>
         </Row>
         <Row style={{ textAlign: 'left' }}>
