@@ -54,10 +54,7 @@
   padding: 13% 0;
 }
 
-.btn.btn-primary:focus {
-  background-color: inherit;
-}
-
+.btn.btn-primary:focus,
 .btn.btn-primary:hover {
   background-color: inherit;
 }
